@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+/* Barra Laterar */
+::after,
+::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.f-icee {
+    background-color: #5191d6;
+}
+
+.b-inicio {
+
+    background-color: #fff;
+}
+
+.bg-holder {
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    top: 0;
+    left: 0;
+    background-size: conver;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.wrapper {
+    display: flex;
+}
+
+.main {
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    transition: all 0.35s ease-in-out;
+    background-color: #fafbfe;
+}
+
+#sidebar {
+    width: 70px;
+    min-width: 70px;
+    z-index: 1000;
+    transition: all .25s ease-in-out;
+    background-color: #5191d6;
+    display: flex;
+    flex-direction: column;
+}
+
+#sidebar.expand {
+    width: 260px;
+    min-width: 260px;
+}
+
+.toggle-btn {
+    background-color: transparent;
+    cursor: pointer;
+    border: 0;
+    padding: 1rem 1.5rem;
+}
+
+.toggle-btn i {
+    font-size: 1.5rem;
+    color: #FFF;
+}
+
+.sidebar-logo {
+    margin: auto 0;
+}
+
+.sidebar-logo a {
+    color: #FFF;
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+#sidebar:not(.expand) .sidebar-logo,
+#sidebar:not(.expand) a.sidebar-link span {
+    display: none;
+}
+
+.sidebar-nav {
+    padding: 2rem 0;
+    flex: 1 1 auto;
+}
+
+a.sidebar-link {
+    padding: .625rem 1.625rem;
+    color: #FFF;
+    display: block;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    border-left: 3px solid transparent;
+}
+
+.sidebar-link i {
+    font-size: 1.1rem;
+    margin-right: .75rem;
+}
+
+a.sidebar-link:hover {
+    background-color: rgba(255, 255, 255, .075);
+    border-left: 3px solid #3b7ddd;
+}
+
+.sidebar-item {
+    position: relative;
+}
+
+#sidebar:not(.expand) .sidebar-item .sidebar-dropdown {
+    position: absolute;
+    top: 0;
+    left: 70px;
+    background-color: #0e2238;
+    padding: 0;
+    min-width: 15rem;
+    display: none;
+}
+
+#sidebar:not(.expand) .sidebar-item:hover .has-dropdown+.sidebar-dropdown {
+    display: block;
+    max-height: 15em;
+    width: 100%;
+    opacity: 1;
+}
+
+#sidebar.expand .sidebar-link[data-bs-toggle="collapse"]::after {
+    border: solid;
+    border-width: 0 .075rem .075rem 0;
+    content: "";
+    display: inline-block;
+    padding: 2px;
+    position: absolute;
+    right: 1.5rem;
+    top: 1.4rem;
+    transform: rotate(-135deg);
+    transition: all .2s ease-out;
+}
+
+#sidebar.expand .sidebar-link[data-bs-toggle="collapse"].collapsed::after {
+    transform: rotate(45deg);
+    transition: all .2s ease-out;
+}
+
+
+.botoneliminar {
+    /* Estilos comunes para el botón */
+}
+
+/* Barra Laterar */
+
+
+/* Media query dispositivos pequeños */
+@media (max-width: 800px) {
+
+    /* Botón Eliminación  */
+    .botoneliminar {
+        padding: 0;
+        /* Elimina el espacio dentro del botón */
+        border: none;
+        /* Elimina el borde del botón */
+        background-color: transparent;
+        /* Hace el fondo transparente */
+    }
+
+    .botoneliminar:hover {
+        padding: 0;
+        /* Elimina el espacio dentro del botón */
+        border: none;
+        /* Elimina el borde del botón */
+        background-color: transparent;
+        /* Hace el fondo transparente */
+    }
+
+    .botoneliminar::before {
+        content: '\eed4';
+        /* Unicode del icono de Boxicons */
+        font-family: 'Boxicons';
+        /* Familia de fuente de Boxicons */
+        font-size: 1.5em;
+        /* Tamaño del icono */
+        color: #dc3545;
+        /* Color del icono */
+    }
+
+    /* Fin Botón Eliminación  */
+
+    /* Modificar Button */
+
+    .botonmod {
+        padding: 0;
+        /* Elimina el espacio dentro del botón */
+        border: none;
+        /* Elimina el borde del botón */
+        background-color: transparent;
+        /* Hace el fondo transparente */
+    }
+
+    .botonmod:hover {
+        padding: 0;
+        /* Elimina el espacio dentro del botón */
+        border: none;
+        /* Elimina el borde del botón */
+        background-color: transparent;
+        /* Hace el fondo transparente */
+    }
+
+    .botonmod::before {
+        content: '\ed9b';
+        /* Unicode del icono de Boxicons */
+        font-family: 'Boxicons';
+        /* Familia de fuente de Boxicons */
+        font-size: 1.5em;
+        /* Tamaño del icono */
+        color: #3b7ddd;
+        /* Color del icono */
+    }
+
+    /* Fin Modificar Button */
+
+    /* Crear Usuario Button */
+    .botoncre {
+        padding: 0;
+        /* Elimina el espacio dentro del botón */
+        border: none;
+        /* Elimina el borde del botón */
+        background-color: transparent;
+        /* Hace el fondo transparente */
+    }
+
+    .botoncre:hover {
+        padding: 0;
+        /* Elimina el espacio dentro del botón */
+        border: none;
+        /* Elimina el borde del botón */
+        background-color: transparent;
+        /* Hace el fondo transparente */
+    }
+
+    .botoncre::before {
+        content: '\ec68';
+        /* Unicode del icono de Boxicons */
+        font-family: 'Boxicons';
+        /* Familia de fuente de Boxicons */
+        font-size: 1.5em;
+        /* Tamaño del icono */
+        color: #08a865;
+        /* Color del icono */
+    }
+
+    /*Fin  Crear Usuario Button */
+    /* Tablas CRUD */
+    .table {
+        font-size: small;
+    }
+
+    /*Fin Tablas CRUD */
+
+    /* Inicio de sesión */
+    .inicsesion {
+        background-image: url(./Img/Meridiano.jpeg);
+    }
+
+    .transparencia {}
+
+    .bienvenida {
+        color: #3b7ddd;
+    }
+
+    /* Fin Inicio de sesión */
+    .bglogin {
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.62);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        padding: 10%;
+    }
+
+    .btoningreso {
+        /* From https://css.glass */
+        background: rgba(10, 54, 187, 0.75);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(1.8px);
+        -webkit-backdrop-filter: blur(1.8px);
+        border: 1px solid rgba(10, 54, 187, 0.9);
+    }
+}
+
+/* Media query dispositivos pequeños */

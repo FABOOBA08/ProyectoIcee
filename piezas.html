@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piezas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="estilo.css" />
+    <link rel="shortcut icon" href="./Img/logo.png">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Barra de navegación -->
+        <nav id="sidebar">
+            <div class="d-flex">
+                <button class="toggle-btn" type="button">
+                    <i class='bx bxs-grid-alt bx-rotate-90'></i>
+                </button>
+                <div class="sidebar-logo">
+                    <a href="./Inicio.html">Inicio</a>
+                </div>
+            </div>
+            <ul class="sidebar-nav">
+                <li class="sidebar-item">
+                    <a href="./usuarios.html" class="sidebar-link">
+                        <i class='bx bxs-group'></i>
+                        <span>Usuarios</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="./bodegas.html" class="sidebar-link">
+                        <i class='bx bxs-store-alt'></i>
+                        <span>Bodegas</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="./cajas.html" class="sidebar-link">
+                        <i class='bx bx-package'></i>
+                        <span>Cajas</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="./piezas.html" class="sidebar-link">
+                        <i class='bx bx-extension'></i>
+                        <span>Piezas</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="./solicitudes.html" class="sidebar-link">
+                        <i class='bx bx-user-voice'></i>
+                        <span>Solicitudes</span>
+                    </a>
+                </li>
+
+            </ul>
+            <div class="sidebar-footer align-bottom ">
+                <a href="./index.html" class="sidebar-link">
+                    <i class='bx bx-log-out'></i>
+                    <span>Salir</span>
+                </a>
+            </div>
+        </nav>
+        <!-- Fin Barra de navegación -->
+        <!-- Tabla Consulta -->
+        <div class="main main-tb-users">
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end d-flex ">
+                <table class=" table table-responsive container text-center mt-5 ">
+                    <thead class="th-primary">
+                        <tr class="flex-row">
+                            <th colspan="2">Id</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Stock BI</th>
+                            <th scope="col">Stock BE</th>
+                            <th scope="col">Stock Total</th>
+                            <th colspan="2">Opciones</th>
+                            <th scope="col">
+                                <!-- Boton botón modal registro de piezas -->
+                                <button type="button" class="btn btn-success btn-sm botoncre" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal">
+                                    Crear Pieza
+                                </button>
+                                <!-- Fin botón modal registro piezas -->
+                                <!-- Modal registro piezas -->
+                                <div class="modal fade" id="exampleModal" tabindex="-1"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Registro de Piezas</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form action="">
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text">
+                                                            <i class='bx bx-info-circle'></i>
+                                                        </span>
+                                                        <input type="text" disabled class="form-control form-control-md fs-6"
+                                                            placeholder="Id" />
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text">
+                                                            <i class='bx bxs-detail'></i>
+                                                        </span>
+                                                        <input type="text" class="form-control form-control-md fs-6"
+                                                            placeholder="Nombre" />
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text">
+                                                            <i class='bx bx-store-alt'></i>
+                                                        </span>
+                                                        <input type="text" class="form-control form-control-md fs-6"
+                                                            placeholder="Stock Bodega Interna" />
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text">
+                                                            <i class='bx bxs-store-alt' ></i>
+                                                        </span>
+                                                        <input type="text" class="form-control form-control-md fs-6"
+                                                            placeholder="Stock Bodega Externa" />
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-bs-dismiss="modal">Cerrar</button>
+                                                <button type="button" class="btn btn-primary">Registrar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Fin Modal registro usuarios -->
+                            </th>
+                        </tr>
+                    </thead>
+                    <!-- Contenido tabla consulta -->
+                    <tbody class="table-group-divider ">
+                        <tr>
+                            <th scope="row"><input type="checkbox"></th>
+                            <th scope="row">001</th>
+                            <td>Tapa papel</td>
+                            <td>15</td>
+                            <td>35</td>
+                            <td>35</td>
+                            <td><a id="Ingresar" class="btn btn-sm btn-danger botoneliminar">Eliminar</a></td>
+                            <td><a id="Ingresar" class="btn btn-sm btn-primary botonmod">Modificar</a></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><input type="checkbox"></th>
+                            <th scope="row">001</th>
+                            <td>Tapa papel</td>
+                            <td>15</td>
+                            <td>35</td>
+                            <td>35</td>
+                            <td><a id="Ingresar" class="btn btn-sm btn-danger botoneliminar">Eliminar</a></td>
+                            <td><a id="Ingresar" class="btn btn-sm btn-primary botonmod">Modificar</a></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><input type="checkbox"></th>
+                            <th scope="row">001</th>
+                            <td>Tapa papel</td>
+                            <td>15</td>
+                            <td>35</td>
+                            <td>35</td>
+                            <td><a id="Ingresar" class="btn btn-sm btn-danger botoneliminar">Eliminar</a></td>
+                            <td><a id="Ingresar" class="btn btn-sm btn-primary botonmod">Modificar</a></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><input type="checkbox"></th>
+                            <th scope="row">001</th>
+                            <td>Tapa papel</td>
+                            <td>15</td>
+                            <td>35</td>
+                            <td>35</td>
+                            <td><a id="Ingresar" class="btn btn-sm btn-danger botoneliminar">Eliminar</a></td>
+                            <td><a id="Ingresar" class="btn btn-sm btn-primary botonmod">Modificar</a></td>
+                        </tr>
+                    </tbody>
+                    <!-- Fin Contenido tabla consulta -->
+                </table>
+            </div>
+        </div>
+        <!-- Fin Tabla Consulta -->
+    </div>
+    <!-- Script -->
+    <script src="script.js"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <!-- Fin Script -->
+</body>
+<!-- Footer -->
+<div class="">
+    <div class=" content-align-center  fixed-bottom z-2 ">
+        <footer class="f-icee text-light">
+            <div class="align-content-center d-flex flex-row  justify-content-center vh-0 g-0 ">
+                <div class="f-content  mt-2">
+                    <p>
+                        2024 - Icee electronics SAS
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
+<!-- Fin Footer -->
+</html>
